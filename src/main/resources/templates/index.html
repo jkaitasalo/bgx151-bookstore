@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Book List</title>
+  </head>
+  <body>
+    <h1>Book List</h1>
+    <ul>
+      <li th:each="book : ${books}">
+        <span th:text="${book.title}">Title</span> by
+        <span th:text="${book.author}">Author</span>
+        (Year: <span th:text="${book.year}">Year</span>, ISBN:
+        <span th:text="${book.isbn}">ISBN</span>, Price:
+        <span th:text="${book.price}">Price</span>)
+      </li>
+    </ul>
+  </body>
+</html>
