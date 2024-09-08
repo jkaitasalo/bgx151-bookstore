@@ -11,13 +11,11 @@ import java.util.List;
 @Controller
 public class BookController {
 
-    @GetMapping("/index")
+    @GetMapping("/booklist")
     public String index(Model model) {
         List<Book> books = new ArrayList<>();
-        books.add(new Book("1984", "George Orwell", 1949, "1234567890", 9.99));
-        books.add(new Book("To Kill a Mockingbird", "Harper Lee", 1960, "0987654321", 7.99));
 
         model.addAttribute("books", books);
-        return "index";
+        return "booklist";
     }
 }
