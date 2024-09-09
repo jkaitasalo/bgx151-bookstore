@@ -22,7 +22,7 @@ public class BooklistApplication {
 	@Bean
 	public CommandLineRunner bookDemo(BookRepository repository) {
 		return (args) -> {
-			log.info("save a couple of books");
+			log.info("saving some books");
 			repository.save(new Book("Ernest Hemingway", "A Farewell to Arms", 1929, "1232323-21"));
 			repository.save(new Book("George Orwell", "Animal Farm", 1945, "2212343-5"));
 
