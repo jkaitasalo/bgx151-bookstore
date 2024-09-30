@@ -27,16 +27,9 @@ public class BooklistApplication {
 		return (args) -> {
 			log.info("saving books");
 
-			Category category1 = new Category("Scifi");
-			Category category2 = new Category("Fantasy");
-			Category category3 = new Category("Science");
-
-			crepository.save(category1);
-			crepository.save(category2);
-			crepository.save(category3);
-
-			brepository.save(new Book("Ernest Hemingway", "A Farewell to Arms", 1929, "1232323-21", category1));
-			brepository.save(new Book("George Orwell", "Animal Farm", 1945, "2212343-5", category2));
+			crepository.save(new Category("Scifi"));
+			crepository.save(new Category("Fantasy"));
+			crepository.save(new Category("Science"));
 
 			log.info("fetch all books");
 			for (Book book : brepository.findAll()) {
